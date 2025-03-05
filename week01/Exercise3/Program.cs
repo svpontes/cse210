@@ -13,7 +13,7 @@ class Program
         //int mNumber; //magic number
        
         //mNumber = int.Parse(Console.ReadLine());
-        int count = 0;
+        int count = 0; //counting guesses
         bool playAgain = true;
         
         while(playAgain){ //nested loop
