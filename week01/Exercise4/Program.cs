@@ -40,8 +40,7 @@ class Program
 
                minPositiveNumber = number;                
             }
-            
-    
+          
             if(total == 0){
                 Console.WriteLine("End of The Program! ");
             }
