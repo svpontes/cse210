@@ -13,7 +13,7 @@ public class Entry
         _promptAnswer = promptAnswer;
     }
 
-    public string GetDate() => _date;
+    public string GetDate() => _date;//use of lambda expression to return directly the value of _date
     public string GetPromptQuestion() => _promptQuestion;
     public string GetPromptAnswer() => _promptAnswer;
 
