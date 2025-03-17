@@ -16,6 +16,7 @@ public class Entry
     public string GetDate() => _date;//use of lambda expression to return directly the value of _date
     public string GetPromptQuestion() => _promptQuestion;
     public string GetPromptAnswer() => _promptAnswer;
+   
 
     public override string ToString() //ToString() - method from class object (where all class derives from). Used to display a textual representation. Override allows personalized text representation, otherwise return text : name of the type object
     {
