@@ -1,29 +1,31 @@
-public class Reference{
+// Class to represent a reference to a specific scripture, including the book, chapter, and verses
+public class Reference {
 
-    private string _book;//Bible, Book of Mormon, Doctrines and Convenants, Pearl of Gret Price 
-    private string _bookName;//ex: First Nefi
-    private int _chapter;
-    private int _verse;
-    private int _endVerse;//allow checking for one verse or more verses
+    private string _book;        // Stores the name of the book (e.g., Bible, Book of Mormon, etc.)
+    private string _bookName;    // Stores the specific name of the book (e.g., "First Nephi")
+    private int _chapter;       // Stores the chapter number
+    private int _verse;         // Stores the verse number
+    private int _endVerse;      // Stores the end verse number (used if referencing a range of verses)
 
-    //method constructor 
-    public Reference(string book, string bookName, int chapter, int verse, int endVerse = -1){//set -1 to endVerse in case of there is no endVerse. 
+    // Constructor method to initialize a reference with the book, chapter, verse, and optionally the end verse
+    // The endVerse parameter defaults to -1 if there is no end verse (used for a single verse)
+    public Reference(string book, string bookName, int chapter, int verse, int endVerse = -1) {
+        _book = book;            // Set the name of the book (e.g., "Bible")
+        _bookName = bookName;    // Set the specific book name (e.g., "First Nephi")
+        _chapter = chapter;      // Set the chapter number
+        _verse = verse;          // Set the verse number
+        _endVerse = endVerse;    // Set the end verse number, or -1 if no range is provided
+    }
 
-        _book = book;
-        _bookName = bookName;
-        _chapter = chapter;
-        _verse = verse;
-        _endVerse = endVerse;
-    } 
-    //method to display book, chapter, verses
-    public string DisplayReference(){
+    // Method to display the reference in a human-readable format
+    public string DisplayReference() {
 
-        if (_endVerse != -1){
-
-            return $"[{_book}] {_bookName} {_chapter}: {_verse}-{_endVerse}";//output display format for an interval of verses "-"
+        // If the endVerse is not -1, return a range of verses
+        if (_endVerse != -1) {
+            return $"[{_book}] {_bookName} {_chapter}: {_verse}-{_endVerse} "; // Format for displaying a range of verses
         }
-        else{
-            return $"[{_book}] {_bookName} {_chapter}: {_verse}";//output display format for one verse
+        else {
+            return $"[{_book}] {_bookName} {_chapter}: {_verse} ";  // Format for displaying a single verse
         }
     }
 }
