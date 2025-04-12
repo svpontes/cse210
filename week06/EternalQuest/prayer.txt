@@ -1,0 +1,2 @@
+100
+ChecklistGoal:prayer,pray every single day at least once,20,2,2,60
